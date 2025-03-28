@@ -1,0 +1,5 @@
+1. Use pseudo-coding to create an algorithm that will ask the user for any input and will determine whether it is in uppercase, lowercase, or not applicable.
+2. Write a simple Python program that will ask the user for the temperature in Celsius and convert it to Fahrenheit. Formula: (0°C × 9/5) + 32 = 32°F
+3. Write a simple Python program that will ask the user weight (kg) and height (m), then will compute his Body Mass Index. Formula: BMI = kg/m²
+4. Write a simple Python program that will ask the user a name of an item and will append it to a list.
+5. Write a simple Python program that will ask the user for his/her age and will determine whether he/she is a senior citizen (at least 60 years old) or not.

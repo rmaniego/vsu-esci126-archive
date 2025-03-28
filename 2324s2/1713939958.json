@@ -1,0 +1,44 @@
+{
+    "coord": {
+        "lon": 124.7946,
+        "lat": 10.746
+    },
+    "weather": [
+        {
+            "id": 804,
+            "main": "Clouds",
+            "description": "overcast clouds",
+            "icon": "04d"
+        }
+    ],
+    "base": "stations",
+    "main": {
+        "temp": 31.25,
+        "feels_like": 36.76,
+        "temp_min": 31.25,
+        "temp_max": 31.25,
+        "pressure": 1008,
+        "humidity": 65,
+        "sea_level": 1008,
+        "grnd_level": 1005
+    },
+    "visibility": 10000,
+    "wind": {
+        "speed": 5.77,
+        "deg": 77,
+        "gust": 7.82
+    },
+    "clouds": {
+        "all": 87
+    },
+    "dt": 1713939958,
+    "sys": {
+        "country": "PH",
+        "sunrise": 1713907521,
+        "sunset": 1713952333
+    },
+    "timezone": 28800,
+    "id": 1713490,
+    "name": "Gabas",
+    "cod": 200
+}
