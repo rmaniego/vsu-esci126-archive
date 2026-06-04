@@ -10,6 +10,7 @@ from datetime import datetime
 pattern = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 
 def write_to_file(filepath, data={}):
+    """ Save a dictionary (empty or not) into a file. """
     with open(filepath, "w", encoding="utf-8") as file:
         json.dump(data, file, indent=4)
 
@@ -20,7 +21,7 @@ def read_file(filepath):
 def is_leap_year(year):
     return year % 4 == 0 and (year % 100 != 0 or year % 400 == 0)
 
-def validate_date(date, max_date):
+def validate_date(date):
     if not pattern.match(date):
         return False
 
@@ -41,7 +42,7 @@ def validate_date(date, max_date):
 
 def format_date(date):
     value = datetime.strptime(date, "%Y-%m-%d")
-    return value.strftime("%B %d, %Y (%a)")
+    return value.strftime("%b %d, %Y (%a)")
 
 def main():
     datapath = "data"
@@ -69,7 +70,7 @@ def main():
         
         if date == "" and placeholder != "yyyy-mm-dd":
             date = placeholder
-        elif not validate_date(date, today):
+        elif not validate_date(date):
             print("Oops, please use 'yyyy-mm-dd' format...")
             continue
         elif date > today:
@@ -91,19 +92,16 @@ def main():
     
     print("\nSaving to file...")
     records = dict(sorted(records.items()))
-    write_to_file(filepath, records)
-    
+    write_to_file(filepath, records)    
     
     print("\n[Weather Information]")
     for date, data in records.items():
         formatted_date = format_date(date)
-        print(f"\n{formatted_date}")
         temperature = data["temperature"]
         humidity = data["humidity"]
         # phenomenon = data["phenomenon"]
         
-        print(f" * {temperature:.1f}°C")
-        print(f" * {humidity:.1f}%")
+        print(f"{formatted_date}\t| {temperature:.1f}°C\t| {humidity:.1f}%")
         # print(f" * {phenomenon} unit or symbol")
 
 if __name__ == "__main__":
