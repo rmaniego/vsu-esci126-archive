@@ -1,0 +1,10 @@
+1. Ask a user any input, then remove all non-numeric characters.
+ - Examples:
+	- dh@24ohr374903jeowjr02(hjf% --> 2437490302
+	
+2. Ask a valid credit card number, then replace all digits with asterisks (*) except the last four digits.
+ - 13, 16, or 19 digits, dashes are allowed.
+ - display errors when necessary.
+ - Examples:
+	- 1111-2222-3333-4444 --> ****-****-****-4444
+	- 1111222233334444 -->	************4444

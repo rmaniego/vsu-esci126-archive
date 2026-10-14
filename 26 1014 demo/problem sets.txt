@@ -1,0 +1,134 @@
+# Python Programming Exercises
+
+## I. Simple Formulas
+
+1\. Simple Interest and Future Value
+
+Write a Python program that computes the future value of an investment using simple interest. The program shall accept the principal amount, interest rate, and investment duration. Allow the user to calculate the interest either by specifying the number of days (using a 360-day year) or by specifying the number of periods (months or years). Use the following formulas:
+
+```
+Interest = Principal * (Number of Days / 360) * Annual Interest Rate
+Interest = Principal * Number of Periods * Interest Rate per Period
+
+Future Value = Principal + Interest
+```
+
+2\. Concrete Slab Volume and Cost Estimation
+
+Write a Python program that estimates the volume and total cost of concrete required for a rectangular slab. The program shall accept the length, width, and thickness of the slab in meters, along with the cost of concrete per cubic meter. Compute and display the concrete volume in cubic meters and its corresponding total cost using the following formulas:
+
+```
+Volume = Length * Width * Thickness
+Total Cost = Volume * Cost per Cubic Meter
+```
+
+## II. Conditions
+
+1\. Grade Classification
+
+Write a Python program that determines the equivalent grade classification based on a student's numerical grade. The program shall accept a grade expressed as a percentage and display its corresponding classification according to the following scale:
+
+| Grade | Classification     |
+| ----- | ------------------ |
+| ≥ 98% | Excellent          |
+| ≥ 95% | Highly Outstanding |
+| ≥ 92% | Outstanding        |
+| ≥ 89% | Very Good          |
+| ≥ 86% | Good               |
+| ≥ 83% | Very Satisfactory  |
+| ≥ 80% | Satisfactory       |
+| ≥ 77% | Fair               |
+| ≥ 75% | Passing            |
+| < 75% | Failed             |
+
+2\. Soil Subgrade Classification
+
+Write a Python program that determines the soil subgrade classification based on its California Bearing Ratio (CBR). The program shall accept the CBR value as a percentage and display the corresponding classification according to the following simplified scale:
+
+| CBR Value | Classification |
+| --------- | -------------- |
+| ≥ 20%     | Very Good      |
+| ≥ 10%     | Good           |
+| ≥ 5%      | Fair           |
+| ≥ 3%      | Poor           |
+| < 3%      | Very Poor      |
+
+For this exercise, use the given classification thresholds regardless of other engineering standards.
+
+## III. Conditions and Formulas
+
+1\. Effective Annual Interest Rate
+
+Write a Python program that computes the effective annual interest rate based on a given nominal interest rate and compounding frequency. The program shall allow the user to select from daily (365), monthly (12), every two months (6), quarterly (4), semi-annually (2), or annually (1). Compute and display the effective annual interest rate using the following formula:
+
+```
+Effective Annual Rate = (1 + Nominal Rate / Periods per Year) ** Periods per Year - 1
+```
+
+2\. Concrete Volume of Structural Components
+
+Write a Python program that calculates the concrete volume of a selected structural component. The program shall allow the user to choose among a rectangular slab, rectangular beam, rectangular column, or cylindrical column. Depending on the selected component, the program shall request the necessary dimensions in meters and compute the volume using the appropriate formula below. Display the result in cubic meters.
+
+```
+Rectangular Slab   = Length * Width * Thickness
+Rectangular Beam   = Length * Width * Height
+Rectangular Column = Length * Width * Height
+Cylindrical Column = 3.1416 * Radius ** 2 * Height
+```
+
+## IV. Loops
+
+1\. Numeric Character Extraction
+
+Write a Python program that accepts a string containing any combination of letters, numbers, symbols, and special characters. Using a loop, examine each character and remove all non-numeric characters while preserving the original order of the digits. Display the resulting numeric string.
+
+Example:
+
+```
+Input:  dh@24ohr374903jeowjr02(hjf%
+Output: 2437490302
+```
+
+2\. Credit Card Number Masking
+
+Write a Python program that accepts a credit card number containing 13, 16, or 19 digits, with or without dashes as separators. The program shall validate the number of digits and ensure that only digits and permitted separators are present. Using a loop, replace all digits with asterisks (`*`) except the last four digits, while preserving any existing dashes. Display an appropriate error message for invalid inputs.
+
+Examples:
+
+```
+Input:  1111-2222-3333-4444
+Output: ****-****-****-4444
+
+Input:  1111222233334444
+Output: ************4444
+```
+
+3\. Construction Material Quantity Summation
+
+Write a Python program that accepts multiple construction material quantities entered as comma-separated values. Using a loop, process each quantity and compute their total. The program shall display the sum of all quantities and the number of entries processed. Display an appropriate error message if any entry is not a valid numeric value.
+
+Examples:
+
+```
+Input:  10,20,15,5
+Output: Total = 50, Entries = 4
+
+Input:  12,8,30
+Output: Total = 50, Entries = 3
+```
+
+4\. Construction Progress Monitoring
+
+Write a Python program that computes the average completion percentage of several construction activities. The program shall first ask for the number of activities, then use a loop to accept the completion percentage of each activity. Only values from 0% to 100% shall be accepted. After processing all activities, calculate and display the average completion percentage. Display an appropriate error message for invalid inputs.
+
+Example:
+
+```
+Number of Activities: 3
+
+Activity 1: 100%
+Activity 2: 80%
+Activity 3: 60%
+
+Average Completion: 80%
+```

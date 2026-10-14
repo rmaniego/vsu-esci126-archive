@@ -1,0 +1,3 @@
+Activity for tonight...
+
+1. Ask a user for quotation, then display the occurence of each letter.

@@ -1,0 +1,19 @@
+Create an algorithm using pseudo code and an equivalent Python Program, that will:
+
+1. Calculate the future value using the simple interest formula.
+	Interest = Principal Value * (Number of Days / 360) * Interest Rate per Day
+	Interest = Principal Value * Number of Periods * Interest Rate per Period
+	Future Value = Principal + Interest
+
+2. Calculate the future worth using the compount interest formula.
+	Future Worth = Principal * (1 + Interest Rate per Period)**Number of Periods
+
+3. Calculate the effective rate per year from the nominal interest rate.
+	Interest = ((1 + (Nominal Interest/Periods per Year))**Periods per Year) - 1
+	Periods per Year:
+		Commpounds daily = 365
+		Commpounds monthly = 12
+		Commpounds bi-annually = 6
+		Commpounds quarterly = 4
+		Commpounds semi-annually = 2
+		Commpounds annually = 1

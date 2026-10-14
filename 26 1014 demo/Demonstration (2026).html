@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Python Programming Exercises</title>
+<style>
+@page { size: A4; margin: 20mm; }
+body {font-family: Georgia, 'Times New Roman', serif; max-width: 850px; margin: 42px auto; padding: 0 24px; color: #222; line-height: 1.55; font-size: 15px;}
+h1 {text-align:center; font-size: 25px; margin-bottom: 32px;} h2 {font-size: 19px; border-bottom: 1px solid #888; padding-bottom: 5px; margin-top: 30px;} h3 {font-size: 16px; margin: 22px 0 8px;} p {margin: 8px 0 12px;} pre {background:#f5f5f5; padding:12px 15px; border:1px solid #ddd; white-space:pre-wrap; font: 13px/1.5 Consolas, monospace; break-inside:avoid;} table {border-collapse:collapse; width:100%; margin:12px 0 18px;} th,td {border:1px solid #888; padding:7px 12px; text-align:left;} th {background:#eee;} section {break-inside:avoid-page;} @media print {body {margin:0; padding:0; max-width:none;} h2 {break-after:avoid;} }
+</style>
+</head>
+<body>
+<h1>Python Programming Exercises</h1>
+<h2>I. Simple Formulas</h2>
+<section><h3>1. Simple Interest and Future Value</h3><p>Write a Python program that computes the future value of an investment using simple interest. The program shall accept the principal amount, interest rate, and investment duration. Allow the user to calculate the interest either by specifying the number of days (using a 360-day year) or by specifying the number of periods (months or years). Use the following formulas:</p><pre>Interest = Principal * (Number of Days / 360) * Annual Interest Rate
+Interest = Principal * Number of Periods * Interest Rate per Period
+
+Future Value = Principal + Interest</pre></section>
+<section><h3>2. Concrete Slab Volume and Cost Estimation</h3><p>Write a Python program that estimates the volume and total cost of concrete required for a rectangular slab. The program shall accept the length, width, and thickness of the slab in meters, along with the cost of concrete per cubic meter. Compute and display the concrete volume in cubic meters and its corresponding total cost using the following formulas:</p><pre>Volume = Length * Width * Thickness
+Total Cost = Volume * Cost per Cubic Meter</pre></section>
+<h2>II. Conditions</h2>
+<section><h3>1. Grade Classification</h3><p>Write a Python program that determines the equivalent grade classification based on a student's numerical grade. The program shall accept a grade expressed as a percentage and display its corresponding classification according to the following scale:</p><table><thead><tr><th>Grade</th><th>Classification</th></tr></thead><tbody><tr><td>≥ 98%</td><td>Excellent</td></tr><tr><td>≥ 95%</td><td>Highly Outstanding</td></tr><tr><td>≥ 92%</td><td>Outstanding</td></tr><tr><td>≥ 89%</td><td>Very Good</td></tr><tr><td>≥ 86%</td><td>Good</td></tr><tr><td>≥ 83%</td><td>Very Satisfactory</td></tr><tr><td>≥ 80%</td><td>Satisfactory</td></tr><tr><td>≥ 77%</td><td>Fair</td></tr><tr><td>≥ 75%</td><td>Passing</td></tr><tr><td>&lt; 75%</td><td>Failed</td></tr></tbody></table></section>
+<section><h3>2. Soil Subgrade Classification</h3><p>Write a Python program that determines the soil subgrade classification based on its California Bearing Ratio (CBR). The program shall accept the CBR value as a percentage and display the corresponding classification according to the following simplified scale:</p><table><thead><tr><th>CBR Value</th><th>Classification</th></tr></thead><tbody><tr><td>≥ 20%</td><td>Very Good</td></tr><tr><td>≥ 10%</td><td>Good</td></tr><tr><td>≥ 5%</td><td>Fair</td></tr><tr><td>≥ 3%</td><td>Poor</td></tr><tr><td>&lt; 3%</td><td>Very Poor</td></tr></tbody></table><p>For this exercise, use the given classification thresholds regardless of other engineering standards.</p></section>
+<h2>III. Conditions and Formulas</h2>
+<section><h3>1. Effective Annual Interest Rate</h3><p>Write a Python program that computes the effective annual interest rate based on a given nominal interest rate and compounding frequency. The program shall allow the user to select from daily (365), monthly (12), every two months (6), quarterly (4), semi-annually (2), or annually (1). Compute and display the effective annual interest rate using the following formula:</p><pre>Effective Annual Rate = (1 + Nominal Rate / Periods per Year) ** Periods per Year - 1</pre></section>
+<section><h3>2. Concrete Volume of Structural Components</h3><p>Write a Python program that calculates the concrete volume of a selected structural component. The program shall allow the user to choose among a rectangular slab, rectangular beam, rectangular column, or cylindrical column. Depending on the selected component, the program shall request the necessary dimensions in meters and compute the volume using the appropriate formula below. Display the result in cubic meters.</p><pre>Rectangular Slab   = Length * Width * Thickness
+Rectangular Beam   = Length * Width * Height
+Rectangular Column = Length * Width * Height
+Cylindrical Column = 3.1416 * Radius ** 2 * Height</pre></section>
+<h2>IV. Loops</h2>
+<section><h3>1. Numeric Character Extraction</h3><p>Write a Python program that accepts a string containing any combination of letters, numbers, symbols, and special characters. Using a loop, examine each character and remove all non-numeric characters while preserving the original order of the digits. Display the resulting numeric string.</p><p>Example:</p><pre>Input:  dh@24ohr374903jeowjr02(hjf%
+Output: 2437490302</pre></section>
+<section><h3>2. Credit Card Number Masking</h3><p>Write a Python program that accepts a credit card number containing 13, 16, or 19 digits, with or without dashes as separators. The program shall validate the number of digits and ensure that only digits and permitted separators are present. Using a loop, replace all digits with asterisks (*) except the last four digits, while preserving any existing dashes. Display an appropriate error message for invalid inputs.</p><p>Examples:</p><pre>Input:  1111-2222-3333-4444
+Output: ****-****-****-4444
+
+Input:  1111222233334444
+Output: ************4444</pre></section>
+<section><h3>3. Construction Material Quantity Summation</h3><p>Write a Python program that accepts multiple construction material quantities entered as comma-separated values. Using a loop, process each quantity and compute their total. The program shall display the sum of all quantities and the number of entries processed. Display an appropriate error message if any entry is not a valid numeric value.</p><p>Examples:</p><pre>Input:  10,20,15,5
+Output: Total = 50, Entries = 4
+
+Input:  12,8,30
+Output: Total = 50, Entries = 3</pre></section>
+<section><h3>4. Construction Progress Monitoring</h3><p>Write a Python program that computes the average completion percentage of several construction activities. The program shall first ask for the number of activities, then use a loop to accept the completion percentage of each activity. Only values from 0% to 100% shall be accepted. After processing all activities, calculate and display the average completion percentage. Display an appropriate error message for invalid inputs.</p><p>Example:</p><pre>Number of Activities: 3
+
+Activity 1: 100%
+Activity 2: 80%
+Activity 3: 60%
+
+Average Completion: 80%</pre></section>
+</body></html>

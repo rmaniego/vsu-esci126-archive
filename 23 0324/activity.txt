@@ -1,0 +1,11 @@
+Create an algorithm using Python Program, that will:
+
+1. Calculate the effective rate per year from the nominal interest rate.
+	Allow the user to choose the Periods per Year:
+		a. Commpounds daily = 365
+		b. Commpounds monthly = 12
+		c. Commpounds bi-annually = 6
+		d. Commpounds quarterly = 4
+		e. Commpounds semi-annually = 2
+		f. Commpounds annually = 1
+	Interest = ((1 + (Nominal Interest/Periods per Year))**Periods per Year) - 1
